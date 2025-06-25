@@ -12,6 +12,9 @@ const item2 = await createItem("Hotweels lamborguini", 39.99, 3);
 // adicionei 2 itens
 await cartService.addItem(myCart, item1);
 await cartService.addItem(myCart, item2);
+
+await cartService.removeItem(myCart, 2)
+
 await cartService.displayCart(myCart);
 
 // deletei 2 itens

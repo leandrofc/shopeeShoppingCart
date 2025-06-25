@@ -17,7 +17,13 @@ async function deleteItem(userCart, name){
 
 // -> remover um item
 async function removeItem(userCart, index){
+    //transforma o indice visual do usuário para o indice do backend
+    const deleteIndex = index - 1;
 
+    // é maior do que zero e se é menor do que o tamanho do carrinho
+    if (index >= 0 && index < userCart.length) {
+        userCart.splice(deleteIndex, 1);
+    }
 }
 
 // -> calcular o total do carrinho
